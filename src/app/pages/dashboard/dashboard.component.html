@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-8">
+    <div class="card">
+      <div class="card-header bg-success">
+        <h6>Student List</h6>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <table class="table table-bordered text-center">
+              <thead>
+                <tr>
+                  <th>Sr.No.</th>
+                  <th>Name</th>
+                  <th>Contact</th>
+                  <th>Email</th>
+                  <th>City</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card-header bg-success">
+      <h5 class="p-1">New Student</h5>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="StudentForm" class="form-group border p-3">
+        <div class="row">
+          <div class="col-6">
+            <label for="">Name</label>
+            <input type="text" class="form-control" formControlName="name" placeholder="Name" />
+          </div>
+          <div class="col-6">
+            <label for="">Contact</label>
+            <input type="text" class="form-control" formControlName="contact"  placeholder="Contact" />
+          </div>
+          <div class="col-6">
+            <label for="">Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Email" />
+          </div>
+          <div class="col-6">
+            <label for="">City</label>
+            <input type="text" class="form-control" formControlName="city" placeholder="City" />
+          </div>
+          <div class="col-6">
+            <label for="">State</label>
+            <input type="text" class="form-control" formControlName="state" placeholder="State" />
+          </div>
+          <div class="col-6">
+            <label for="">PinCode</label>
+            <input type="text" class="form-control" formControlName="pincode" placeholder="pincode" />
+          </div>
+          <div class="col-12">
+            <label for="">Address</label>
+            <textarea  type="text" class="form-control" formControlName="address" placeholder="Address"></textarea>
+          </div>
+          <div class="row">
+            <div class="col-6 text-center pt-3">
+              <button class="btn btn-secondary">Reset</button>
+            </div>
+            <div class="col-6 text-center pt-3">
+              <button class="btn btn-success" (click)="onSave()">Add Student</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
